@@ -4,3 +4,68 @@
   padding: .5rem;
   grid-gap: .5rem;
 }
+
+.grid-item{
+  border-radius: 4px;
+  padding: .5em;
+  text-align: center;
+}
+
+.two{
+  grid-row: span 6;
+  background-color: red;
+}
+
+nav, footer {
+  background-color: #444;
+}
+footer {
+  text-align: center;
+  padding: 1em 0 .3em 0;
+  color: #D0D0D0;
+}
+/*-- Main Menu Styles--*/
+nav ul {
+  display: flex; /* displays menu items horizontally*/
+  justify-content: center;  /* displays menu items in the center*/
+  justify-content:space-evenly;
+  list-style: none;
+  padding: 1em;
+}
+nav a:link, nav a:visited {
+  color: #D0D0D0;
+  text-decoration: none;
+}
+nav a:hover, nav a:active  {
+  color: #F0F0F0;
+  text-decoration: underline;
+}
+nav a.active {
+  color: #F0F0F0;
+}
+
+.grid-container {
+  grid-template-areas:
+   "nav nav nav"
+   "proposition proposition proposition"
+   "reason1 reason2 reason3"
+   "wall wall wall"
+   "pic1 desc1 desc1"
+   "pic2 desc2 desc2"
+   "pic3 desc3 desc3"
+   "foot foot foot";
+}
+
+.one { grid-area: nav;}
+.two { grid-area: proposition;}
+.three { grid-area: reason1;}
+.four { grid-area: reason2;}
+.five { grid-area: reason3;}
+.six { grid-area: wall;}
+.seven { grid-area: pic1;}
+.eight { grid-area: pic2;}
+.nine { grid-area: pic3;}
+.ten { grid-area: desc1;}
+.eleven { grid-area: desc2;}
+.twelve { grid-area: desc3;}
+.thirteen {grid-area: foot;}
