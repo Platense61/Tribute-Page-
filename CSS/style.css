@@ -1,1 +1,6 @@
-
+.grid-container{
+  display:grid;
+  border: 2px dashed #DDD;
+  padding: .5rem;
+  grid-gap: .5rem;
+}
