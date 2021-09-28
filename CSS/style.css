@@ -14,6 +14,12 @@
 
 }
 
+/* from class makes image responsive to shrinking and growing */
+img{
+  display: block;
+  height: auto;
+}
+
 .grid-item{
   border-radius: 4px;
   padding: 0;
@@ -21,12 +27,14 @@
 }
 
 .two{
-  grid-row: span 6;
   background-color: red;
 }
 
-nav, footer {
-  background-color: #444;
+.six{
+  display: grid;
+}
+
+
 }
 footer {
   text-align: center;
@@ -34,29 +42,48 @@ footer {
   color: #D0D0D0;
 }
 /*-- Main Menu Styles--*/
-nav ul {
-  display: flex; /* displays menu items horizontally*/
-  justify-content: center;  /* displays menu items in the center*/
-  justify-content:space-evenly;
-  list-style: none;
-  padding: 1em;
+.main-nav {
+  background: var(--dark);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-nav a:link, nav a:visited {
-  color: #D0D0D0;
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand h1 {
+  padding-top: 1.2rem;
+  padding-left: 1.2rem;
+}
+.nav-links {
+  padding-top: 1.2rem;
+}
+.nav-links a {
+  margin-left: 1.5rem;
+  transition: var(--reg);
+}
+a:link {
+  color: var(--white);
   text-decoration: none;
 }
-nav a:hover, nav a:active  {
-  color: #F0F0F0;
-  text-decoration: underline;
+a:visited {
+  color: var(--white);
 }
-nav a.active {
-  color: #F0F0F0;
+a:hover {
+  color: var(--accent);
+}
+a:active, a.active {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 .grid-container {
 grid-template-areas:
    "nav nav nav"
-   "proposition proposition proposition"
    "proposition proposition proposition"
    "reason1 reason2 reason3"
    "wall wall wall"
@@ -64,6 +91,13 @@ grid-template-areas:
    "pic2 desc2 desc2"
    "pic3 desc3 desc3"
    "foot foot foot";
+}
+
+.six{
+  grid-template-areas:
+    "pic1 desc1 desc1"
+    "pic2 desc2 desc2"
+    "pic3 desc3 desc3";
 }
 
 .one { grid-area: nav;}
