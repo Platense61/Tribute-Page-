@@ -5,9 +5,10 @@ html, body, main, div, image, h1, h2, p {
 
 .grid-container{
   display:grid;
-  grid-template-rows: 100px 1fr 1fr 1fr 30px;
+  grid-template-rows: 101px 1fr 1fr 1fr 30px;
+  grid-template-columns: 101px 1fr 1fr 1fr 101px; /* odd numbers may resolve browser bug */
   margin: 0;
-  border: 2px dashed #DDD;
+  /*border: 2px dashed #DDD; */
   padding: 0;
   grid-gap: .5rem;
 }
@@ -21,7 +22,10 @@ html, body, main, div, image, h1, h2, p {
   font-weight: 500;
   font-family: 'Fira Sans', sans-serif;
   padding: 2rem 0;
+}
 
+body{
+  background-color: #171717;
 }
 
 /* from class makes image responsive to shrinking and growing */
@@ -42,6 +46,7 @@ img{
 
 .six{
   display: grid;
+  grid-gap: 1.5rem;
 }
 
 
@@ -58,6 +63,7 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 .brand {
@@ -93,17 +99,17 @@ a:active, a.active {
 
 .grid-container {
 grid-template-areas:
-   "nav nav nav"
-   "proposition proposition proposition"
-   "reason1 reason2 reason3"
-   "wall wall wall"
-   "foot foot foot";
+   ". nav nav nav ."
+   ". proposition proposition proposition ."
+   ". reason1 reason2 reason3 ."
+   ". wall wall wall ."
+   "foot foot foot foot foot";
 }
 
 .six{
   grid-template-areas:
     "pic1 desc1 desc1"
-    "pic2 desc2 desc2"
+    "desc2 desc2 pic2"
     "pic3 desc3 desc3";
 }
 
