@@ -1,4 +1,4 @@
-html, body, main, div, image, h1, h2, p {
+html, body, main, div, image, h1, h2, p, img{
   margin: 0;
   padding: 0;
 }
@@ -28,10 +28,22 @@ body{
   background-color: #171717;
 }
 
-/* from class makes image responsive to shrinking and growing */
+header {
+  margin: 3rem auto;
+}
+
+.back{
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+}
+.nav-img{
+  height: 60px;
+}
 img{
-  display: block;
+  width: auto;
   height: auto;
+  object-fit: cover;
 }
 
 .grid-item{
@@ -40,9 +52,6 @@ img{
   text-align: center;
 }
 
-.two{
-  background-color: red;
-}
 
 .six{
   display: grid;
@@ -64,6 +73,7 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  font-family: 'Luckiest Guy', cursive;
 }
 
 .brand {
@@ -114,7 +124,7 @@ grid-template-areas:
 }
 
 .one { grid-area: nav;}
-.two { grid-area: proposition;}
+header { grid-area: proposition;}
 .three { grid-area: reason1;}
 .four { grid-area: reason2;}
 .five { grid-area: reason3;}
