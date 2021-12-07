@@ -7,10 +7,15 @@ p{
   color: white;
 }
 
+h1{
+  color: white;
+}
+
+/*
 *{
   border: 1px solid red;
   margin: 4px;
-} 
+} */
 
 hr{
   color: white;
@@ -19,7 +24,7 @@ hr{
 
 .grid-container{
   display:grid;
-  grid-template-rows: 101px .8fr .5fr 1fr 30px;
+  grid-template-rows: 101px .8fr .5fr 1fr 80px;
   grid-template-columns: 101px 1fr 1fr 1fr 101px; /* odd numbers may resolve browser bug */
   margin: 0;
   /*border: 2px dashed #DDD; */
@@ -42,11 +47,6 @@ body{
   background-color: #171717;
 }
 
-.back{
-  height: 500px;
-  width: 100%;
-}
-
 .nav-img{
   height: 50px;
 
@@ -62,19 +62,57 @@ img{
   text-align: center;
 }
 
+/* .two{
+  background-image: url('vision-wallpaper.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
+.two img{
+  width: 100%;
+  height: 80%;;
+}
+
+.vision{
+  width: 100%;
+  object-fit: contain;
+}
 
 .six{
   display: grid;
   grid-gap: 1.5rem;
 }
-
+.img-quote{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  color: red;
+  justify-content: center;
+  margin: auto;
+  width: 50%;
+}
 
 }
-footer {
+/* footer {
   text-align: center;
-  padding: 1em 0 .3em 0;
   color: #D0D0D0;
+  padding: 2rem 2rem 1rem 2rem;
+  display: flex;
+  direction: row;
+  font-size: 3rem;
+  margin-top: 100px;
+} */
+
+.thirteen{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
+footer{
+  padding-top: 25px;
+}
+
 /*-- Main Menu Styles--*/
 .main-nav {
   background: #171717;
@@ -84,6 +122,15 @@ footer {
   align-items: center;
   justify-content: space-between;
   font-family: 'Luckiest Guy', cursive;
+}
+
+figure blockquote{
+  max-width: 70%;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: red;
 }
 
 .brand {
@@ -118,7 +165,7 @@ a:active, a.active {
 }
 
 .grid-container {
-grid-template-areas:
+  grid-template-areas:
    ". nav nav nav ."
    ". proposition proposition proposition ."
    ". reason1 reason2 reason3 ."
@@ -133,6 +180,130 @@ grid-template-areas:
     "pic3 desc3 desc3";
 }
 
+.six{
+  grid-template-rows: 1fr 1fr 1fr;
+}
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;900&display=swap');
+/* Area for media card below big pic */
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background: #232427;
+} */
+
+body .media-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px 0;
+}
+
+body .media-container .card {
+  position: relative;
+  min-width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 30px;
+  transition: 0.5s;
+}
+
+body .media-container .card:nth-child(1) .box .content a {
+  background: #2196f3;
+}
+
+body .media-container .card:nth-child(2) .box .content a {
+  background: #e91e63;
+}
+
+body .media-container .card:nth-child(3) .box .content a {
+  background: #23c186;
+}
+
+body .media-container .card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #2a2b2f;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+body .media-container .card .box:hover {
+  transform: translateY(-50px);
+}
+
+body .media-container .card .box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+body .media-container .card .box .content {
+  padding: 20px;
+  text-align: center;
+}
+
+body .media-container .card .box .content h2 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+body .media-container .card .box .content h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  z-index: 1;
+  transition: 0.5s;
+  margin-bottom: 15px;
+}
+
+body .media-container .card .box .content p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+body .media-container .card .box .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+body .media-container .card .box .content a:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: #fff;
+  color: #000;
+}
+
+
 .one { grid-area: nav;}
 .two { grid-area: proposition;}
 .three { grid-area: reason1;}
@@ -142,7 +313,7 @@ grid-template-areas:
 .seven { grid-area: pic1;}
 .eight { grid-area: pic2;}
 .nine { grid-area: pic3;}
-.ten { grid-area: desc1;}
-.eleven { grid-area: desc2;}
-.twelve { grid-area: desc3;}
+.ten { grid-area: desc1; background-color: #353839; }
+.eleven { grid-area: desc2; background-color: #353839;}
+.twelve { grid-area: desc3; background-color: #353839;}
 .thirteen {grid-area: foot;}
